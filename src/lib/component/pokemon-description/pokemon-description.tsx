@@ -1,4 +1,5 @@
 import Preact from "preact";
+import styles from './pokemon-description.module.scss'
 
 type PokemonDescriptionProps = {
     text: string,
@@ -6,6 +7,6 @@ type PokemonDescriptionProps = {
 
 export const PokemonDescription: Preact.FunctionalComponent<PokemonDescriptionProps> = ({text}) => {
     return (
-        <p>{text}</p>
+        <p className={styles.description} >{text}</p>
     )
 }

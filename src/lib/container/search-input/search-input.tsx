@@ -1,5 +1,6 @@
 import Preact from "preact";
 import {useState, useCallback} from 'preact/hooks'
+import {SearchField} from "../../component/search-field/search-field";
 
 export type SearchInputProps = {
     onSearchTermEntered: (term: string) => void
@@ -23,8 +24,7 @@ export const SearchInput: Preact.FunctionalComponent<SearchInputProps> = ({onSea
 
     return (
         <form onSubmit={handleSubmit}>
-            <input type='text' value={term} onChange={onTextEntered} />
-            <button type='submit'>search</button>
+            <SearchField value={term} onChange={onTextEntered} />
         </form>
 
     )

@@ -1,4 +1,5 @@
 import Preact from "preact";
+import styles from './pokemon-card.module.scss'
 
 type PokemonCardProps = {
     imageUrl: string
@@ -6,6 +7,6 @@ type PokemonCardProps = {
 
 export const PokemonCard: Preact.FunctionalComponent<PokemonCardProps> = ({imageUrl}) => {
     return (
-        <img src={imageUrl} />
+        <img alt='Pokemon card image' className={styles.card} src={imageUrl} />
     )
 }

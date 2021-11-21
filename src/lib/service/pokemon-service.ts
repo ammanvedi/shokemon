@@ -85,11 +85,8 @@ class PokemonService {
     }
 
     public getTranslatedDescription(description: string): Promise<string> {
-        console.log(description)
         const url = `${this.baseUrlTranslationsApi}/translate/shakespeare.json?text=${encodeURIComponent(description)}`
-        return fetch(url , {
-            method: 'GET',
-        })
+        return fetch(url )
             .then(response => response.json())
             .then((data: ShakespeareResponse) => {
                 return data.contents.translated

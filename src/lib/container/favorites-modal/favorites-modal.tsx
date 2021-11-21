@@ -5,6 +5,7 @@ import {PokemonDescription} from "../../component/pokemon-description/pokemon-de
 import {useCallback, useContext} from "preact/hooks";
 import {FavoriteButton} from "../../component/favorite-button/favorite-button";
 import {FavoritesContext, FavoritesContextValue} from "../../hook/favorite-context";
+import {Page} from "../../component/page/page";
 
 export const FavoritesModal: Preact.FunctionalComponent<{}> = () => {
     const {toggleFavorite, favorites} = useContext<FavoritesContextValue>(FavoritesContext);
@@ -13,27 +14,37 @@ export const FavoritesModal: Preact.FunctionalComponent<{}> = () => {
         toggleFavorite(name)
     }, [toggleFavorite])
 
+    const favList = Object.values(favorites);
+
+    if(!favList.length) {
+        return null;
+    }
+
     return (
-        <ul>
-            {Object.values(favorites).map(favorite => (
-                <li>
-                    <PokemonInfo
-                        name={favorite.name}
-                        leftContent={
-                            <PokemonCard imageUrl={favorite.image} />
-                        }
-                        bodyContent={
-                            <>
-                                {favorite.description && <PokemonDescription text={favorite.description} />}
-                                <FavoriteButton
-                                    onClick={() => handleFavoriteClick(favorite.name)}
-                                    isFavorited={!!favorites[favorite.name]}
-                                />
-                            </>
-                        }
-                    />
-                </li>
-            ))}
-        </ul>
+        <Page>
+            <h2>Favorites</h2>
+            <ul>
+                {favList.map(favorite => (
+                    <li>
+                        <PokemonInfo
+                            name={favorite.name}
+                            leftContent={
+                                <PokemonCard imageUrl={favorite.image} />
+                            }
+                            bodyContent={
+                                <>
+                                    {favorite.description && <PokemonDescription text={favorite.description} />}
+                                    <FavoriteButton
+                                        onClick={() => handleFavoriteClick(favorite.name)}
+                                        isFavorited={!!favorites[favorite.name]}
+                                    />
+                                </>
+                            }
+                        />
+                    </li>
+                ))}
+            </ul>
+        </Page>
+
     )
 }

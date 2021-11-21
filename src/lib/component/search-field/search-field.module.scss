@@ -1,0 +1,36 @@
+@import "../../../var.module";
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img {
+  display: block;
+  width: 150px;
+  margin-top: 20px;
+}
+
+.input {
+  font-size: 3rem;
+  border: 2px solid $pokemon-blue;
+  width: 100%;
+}
+
+.field {
+  display: flex;
+}
+
+.button {
+  font-size: 2rem;
+  appearance: none;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: $white;
+  background-color: $pokemon-blue;
+  margin: 10px auto;
+  display: block;
+}

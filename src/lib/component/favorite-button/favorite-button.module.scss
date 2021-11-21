@@ -1,0 +1,12 @@
+@import '../../../var.module';
+
+.heart {
+  width: 10px;
+  margin-right: 5px;
+}
+
+.button {
+  padding: 5px 10px;
+  border: 2px solid $pokemon-blue;
+  border-radius: 4px;
+}

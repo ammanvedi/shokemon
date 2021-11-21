@@ -3,26 +3,23 @@ body {
   width: 100%;
   padding: 0;
   margin: 0;
-  background: #fafafa;
   font-family: 'Helvetica Neue', arial, sans-serif;
   font-weight: 400;
-  color: #444;
+  color: #212121;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  font-size: 10px;
 }
 
 * {
   box-sizing: border-box;
 }
 
-#app {
-  text-align: center;
-  background-color: #673ab8;
-  color: #fff;
-  font-size: 1.5em;
-  padding-top: 100px;
-}
-
-.link {
-  color: #fff;
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }

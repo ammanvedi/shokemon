@@ -17,10 +17,12 @@ const useData = <DATA, ARGS extends any[]>(
             request(...args)
                 .then(data => {
                     setData(data)
+                    setError(null)
                 })
                 .catch(e => {
                     console.error(e)
                     setError(e.toString)
+                    setData(null)
                 })
                 .finally(() => {
                     setLoading(false)
