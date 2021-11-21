@@ -11,7 +11,6 @@ type FavoriteButtonProps = {
 export const FavoriteButton: Preact.FunctionalComponent<FavoriteButtonProps> = ({onClick, isFavorited}) => {
     return (
         <button className={styles.button} onClick={onClick}>
-
             <img alt='' className={styles.heart} src={isFavorited ? heartFilled : heartUnFilled} />
             {isFavorited ? 'Un-Favorite' : 'Favorite'}
         </button>

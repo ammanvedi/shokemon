@@ -14,15 +14,18 @@ const useData = <DATA, ARGS extends any[]>(
         useEffect(() => {
             setLoading(true);
             setError(null);
+            setData(null);
             request(...args)
                 .then(data => {
                     setData(data)
                     setError(null)
                 })
                 .catch(e => {
-                    console.error(e)
-                    setError(e.toString)
-                    setData(null)
+
+                    if(e) {
+                        setError(e.toString())
+                    }
+
                 })
                 .finally(() => {
                     setLoading(false)

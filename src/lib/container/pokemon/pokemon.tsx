@@ -6,7 +6,7 @@ import {Description} from "../description/description";
 import {Loader} from "../../component/loader/loader";
 import {FavoriteButton} from "../../component/favorite-button/favorite-button";
 import {useCallback, useContext} from "preact/hooks";
-import {FavoritesContext, FavoritesContextValue} from "../../hook/favorite-context";
+import {FavoritesContext, FavoritesContextValue} from "../../context/favorite-context";
 
 type PokemonProps = {
     name: string,

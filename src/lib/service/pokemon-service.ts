@@ -71,7 +71,6 @@ class PokemonService {
     }
 
     public getSpecies(name: string): Promise<PokemonSpecies> {
-        console.log(this)
         return fetch(`${this.baseUrlPokemon}/pokemon-species/${name}`)
             .then(response => response.json())
             .then((data: PokemonSpeciesResponse) => {

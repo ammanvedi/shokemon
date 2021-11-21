@@ -16,6 +16,5 @@ export const PokemonInfo: Preact.FunctionalComponent<PokemonInfoProps> = ({name,
                 {bodyContent}
             </div>
         </article>
-
     )
 }

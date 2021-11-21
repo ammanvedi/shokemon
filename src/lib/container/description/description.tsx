@@ -16,7 +16,7 @@ export const Description: Preact.FunctionalComponent<DescriptionProps> = ({descr
 
     const desc = translatedDescription || description
 
-    if (!desc ) {
+    if (!desc) {
         return null
     }
 
