@@ -28,6 +28,12 @@ Then visit [http://localhost:3000](http://localhost:3000)
 
 ### Running the Tests
 
+You need to make sure that the dev server is running first
+
+`npm run dev`
+
+and then in a separate terminal
+
 `npm test`
 
 ### Building Production Code
@@ -50,3 +56,5 @@ Then visit [http://localhost:3000](http://localhost:3000)
    3. Could we use a different service
    4. Could we present a better error message to the user
 9. Need an actual loading icon
+10. .env shouldnt be committed but im committing for ease, this should be set per environment.
+11. The testing is really not exhaustive
