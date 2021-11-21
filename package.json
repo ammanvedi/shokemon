@@ -1,0 +1,19 @@
+{
+  "name": "shokemon",
+  "author": "Amman Vedi <amman.vedi@gmail.com>",
+  "description": "Its the pokemon you know and love, but with an old english twist!",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "./node_modules/.bin/vite",
+    "build": "./node_modules/.bin/tsc && ./node_modules/.bin/vite build",
+    "serve": "./node_modules/.bin/vite preview"
+  },
+  "dependencies": {
+    "preact": "^10.5.13"
+  },
+  "devDependencies": {
+    "@preact/preset-vite": "^2.0.0",
+    "typescript": "^4.3.2",
+    "vite": "^2.6.4"
+  }
+}
