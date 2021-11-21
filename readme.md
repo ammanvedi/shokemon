@@ -58,3 +58,4 @@ and then in a separate terminal
 9. Need an actual loading icon
 10. .env shouldnt be committed but im committing for ease, this should be set per environment.
 11. The testing is really not exhaustive
+12. we could fetch all the species and do an autocomplete
